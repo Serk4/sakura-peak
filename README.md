@@ -1,73 +1,31 @@
-# React + TypeScript + Vite
+# Sakura Peak 🌸
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Real-time cherry blossom peak-bloom predictor for Japan and Washington, DC**
 
-Currently, two official plugins are available:
+A modern single-page React application that visualizes the famous north-to-south bloom wave in Japan and the single-city forecast for DC using live weather data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Live Demo (pseudo-Production)
+https://sakura-peak-abcdefg.azurestaticapps.net (Azure Static Web Apps)
 
-## React Compiler
+### Tech Stack (chosen for enterprise relevance)
+- **Frontend**: React 19 + Vite + TypeScript + Tailwind CSS + shadcn/ui
+- **Maps**: Leaflet (minimalist) + custom SVG overlays
+- **Visualization**: Custom SVG/CSS "slide-rule" bloom indicator
+- **Data**: Open-Meteo Weather API + Growing Degree Days (GDD) model
+- **Deployment**: Vercel (fast dev previews) + Azure Static Web Apps (cloud-native showcase)
+- **CI/CD**: GitHub Actions (coming soon — full pipeline)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Features
+- Toggle between Japan (nationwide bloom wave) and Washington, DC (single-city)
+- Low-resolution minimalist map with major city markers (Japan) or single marker (DC)
+- Animated **slide-rule bloom indicator**:
+  - Center line = predicted peak bloom date
+  - North line = start of blooming
+  - South line = last good viewing day (hanami)
+  - Bright horizontal bands show current bloom region moving north
+- Responsive, beautiful, mobile-friendly SPA
 
-## Expanding the ESLint configuration
+### Why this project?
+Built specifically to demonstrate modern full-stack practices, cloud deployment, clean architecture, and data-driven UI — skills directly applicable to enterprise modernization work at any organization.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+See also: [DotNetCoreWebApi](https://github.com/Serk4/DotNetCoreWebApi) (my .NET 9 modernization prototype) and [React-Demo](https://github.com/Serk4/React-Demo) (enterprise CI/CD example).
