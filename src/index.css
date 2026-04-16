@@ -9,3 +9,14 @@ body {
 .leaflet-container {
   background: #f8f9fa;
 }
+
+.maplibregl-map {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* Clean labels */
+.maplibregl-marker {
+  transition: transform 0.3s ease;
+}
+

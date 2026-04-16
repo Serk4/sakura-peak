@@ -24,6 +24,8 @@ https://sakura-peak-abcdefg.azurestaticapps.net (Azure Static Web Apps)
   - South line = last good viewing day (hanami)
   - Bright horizontal bands show current bloom region moving north
 - Responsive, beautiful, mobile-friendly SPA
+- **Bloom forecast data** stored in `src/data/bloomDates.ts` — easy to update each year
+- Future-ready architecture: Planned integration with weather APIs and official bloom forecasts (Japan  Meteorological Agency + National Cherry Blossom Festival)
 
 ### Why this project?
 Built specifically to demonstrate modern full-stack practices, cloud deployment, clean architecture, and data-driven UI — skills directly applicable to enterprise modernization work at any organization.
