@@ -1,33 +1,25 @@
-# Sakura Peak 🌸
+# SakuraPeak 🌸
 
-**Real-time cherry blossom peak-bloom predictor for Japan and Washington, DC**
+Cherry Blossom Peak Bloom Predictor for Japan and Washington DC.
 
-A modern single-page React application that visualizes the famous north-to-south bloom wave in Japan and the single-city forecast for DC using live weather data.
+A beautiful, simple web app that helps you plan your **hanami** (cherry blossom viewing) trips by showing real-time bloom predictions using weather data.
 
-### Live Demo (pseudo-Production)
-https://sakura-peak-abcdefg.azurestaticapps.net (Azure Static Web Apps)
+## Features
+- Toggle between Japan and Washington DC views
+- Interactive date slider to preview bloom progression
+- Glowing animated city markers that brighten and turn into 🌸 when at peak bloom
+- Clean, modern sakura-themed design
+- Static beautiful map of Japan with glowing markers
 
-### Tech Stack (chosen for enterprise relevance)
-- **Frontend**: React 19 + Vite + TypeScript + Tailwind CSS + shadcn/ui
-- **Maps**: Leaflet (minimalist) + custom SVG overlays
-- **Visualization**: Custom SVG/CSS "slide-rule" bloom indicator
-- **Data**: Open-Meteo Weather API + Growing Degree Days (GDD) model
-- **Deployment**: Vercel (fast dev previews) + Azure Static Web Apps (cloud-native showcase)
-- **CI/CD**: GitHub Actions (coming soon — full pipeline)
+## Tech Stack
+- React + TypeScript + Vite
+- Tailwind CSS
+- TanStack Query (React Query)
+- MapLibre / Static background approach
 
-### Features
-- Toggle between Japan (nationwide bloom wave) and Washington, DC (single-city)
-- Low-resolution minimalist map with major city markers (Japan) or single marker (DC)
-- Animated **slide-rule bloom indicator**:
-  - Center line = predicted peak bloom date
-  - North line = start of blooming
-  - South line = last good viewing day (hanami)
-  - Bright horizontal bands show current bloom region moving north
-- Responsive, beautiful, mobile-friendly SPA
-- **Bloom forecast data** stored in `src/data/bloomDates.ts` — easy to update each year
-- Future-ready architecture: Planned integration with weather APIs and official bloom forecasts (Japan  Meteorological Agency + National Cherry Blossom Festival)
+## Getting Started
 
-### Why this project?
-Built specifically to demonstrate modern full-stack practices, cloud deployment, clean architecture, and data-driven UI — skills directly applicable to enterprise modernization work at any organization.
+```bash
+npm install
+npm run dev
 
-See also: [DotNetCoreWebApi](https://github.com/Serk4/DotNetCoreWebApi) (my .NET 9 modernization prototype) and [React-Demo](https://github.com/Serk4/React-Demo) (enterprise CI/CD example).
